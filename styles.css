@@ -1,0 +1,149 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Crimson Text', serif; /* Set Crimson Text as the universal font */
+  background-color: #242124;
+  color: white;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px;
+}
+
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  width: 250px; /* Adjust as needed */
+  background-color: #1a2421;
+  color: white;
+  padding: 20px;
+  border-radius: 8px; /* Clean edges */
+  border: 2px solid darkgray;
+  box-shadow: 0 0 10px darkgray(210, 180, 140, 0.80);
+  min-width: 259px;
+}
+
+.resume-link a:hover {
+  background-color: #a1876f; /* Darker tan color on hover */
+}
+
+.contact-link {
+  color: white; 
+}
+
+.sidebar p {
+  font-weight: bold; /* Make the text bold */
+  background: #1a2421; /* Set a color */
+  text-align: center; /* Center the text */
+  margin-top: 5px; /* Add some space above */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.profile-image {
+  width: 100px;  /* Adjust the size */
+  height: 100px; /* Adjust the size */
+  border-radius: 100%; /* Makes the image round */
+  object-fit: cover; /* No distortion */
+  margin-bottom: 20px; /* Adds some space below the image */;
+}
+
+/* Main content area */
+.main-content {
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px;
+}
+
+/* Main Box with navigation */
+.main-box {
+  background-color: #1a2421;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px;
+}
+
+.main-box::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border: 2px solid darkgray;
+  box-shadow: 0 0 10px darkgray(210, 180, 140, 0.8); /* Tan glow effect */
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d2b48c; /* Tan background on hover */
+  color: white;
+}
+
+/* Section styles */
+section {
+  margin-bottom: 40px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+
+/* Desktops */
+@media screen and (max-width: 1025px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .main-box {
+      width: 100%;
+  }
+}
